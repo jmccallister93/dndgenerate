@@ -1,0 +1,156 @@
+    /* color: #36454F; 
+    Dark Grey Font color*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    display: inline;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+}
+
+.navbar-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;   
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover{
+    background-color: #555;
+}
+
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* CONTENT SECTION 1*/
+
+.content-container-1{
+    text-align: center;
+}
+
+.content-title{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+    border-bottom: solid 1px;
+    font-size: 32px;
+}
+
+.cta-button-container{
+    text-align: center;
+}
+
+.cta-button{
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    width: 50%;
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.cta-button:hover{
+    background-color: #228B22;
+}
+
+.cta-button a{
+    color: white;
+    font-size: 24px;
+}
+
+.content-text{
+    color: #333;
+    font-size: 18px;
+}
+
+/* CONTENT SECTION 2 */
+
+
+
+@media (max-width: 450px){
+    .toggle-button{
+        display: flex;
+    }
+
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+}
