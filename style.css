@@ -37,6 +37,11 @@ li{
     margin: 2rem;
 }
 
+.navbar-links{
+    position: fixed;
+    left: 65%;
+}
+
 .navbar-links ul{
     margin: 10px;
     padding: 0;
