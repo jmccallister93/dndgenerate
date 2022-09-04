@@ -1,0 +1,36 @@
+.form-container{
+    color: black;
+}
+
+.form-container input, select{
+    font-size: 36px;
+    
+}
+
+.form-wrapper{
+    font-size: 36px;
+    /* text-align: center; */
+}
+
+input[type=number]{
+    width: 12%;
+}
+
+.monster-name-wrapper{
+    width: 70%;
+}
+
+#shield{
+    transform: scale(2);
+    height: 1.5rem;
+}
+
+.form-wrapper > * {
+    margin: 1%;
+}
+
+.content-container-2{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}

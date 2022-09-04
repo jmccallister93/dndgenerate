@@ -99,7 +99,7 @@ li{
     position: relative;
     height: 40%;
     padding: 10%;
-    background-image: url("img/galazy_dice-modified.jpg");
+    background-image: url('/home/topshelf/repos/dndgenerate/img/galazy_dice-modified.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
