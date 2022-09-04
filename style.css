@@ -21,25 +21,29 @@ li{
     display: inline;
 }
 
+
 /* NAVBAR */
 
 .navbar-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     align-items: center;
     background: white;
     color: #333;
     height: 200px;
-    margin: 2.5%;
+    margin:auto;
+    padding: 0;
+    place-items: center;
 }
 
 .navbar-img{
-    margin: 2rem;
+   
 }
 
 .navbar-links{
-    position: fixed;
-    left: 65%;
+    position: inline-block;
+    align-items: center;
 }
 
 .navbar-links ul{
@@ -61,11 +65,12 @@ li{
 }
 
 .navbar-links li:hover{
-    background-color: 	rgba(255, 0, 0, 0.5);
+    background-color: 	#D72323;
+   
 }
 
 .navbar-links li a:hover{
-    color: #333;
+    color: white;
 }
 
 /* .toggle-button{
@@ -91,20 +96,34 @@ li{
 .content-container-1{
     text-align: center;
     display: block;
+    position: relative;
     height: 40%;
     padding: 10%;
-    background-color: #333;
+    background-image: url("img/galazy_dice-modified.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color: #333; */
+}
+
+.content-background{
+    position: absolute;
+    width: 100%;
+    height: auto;
 }
 
 .content-title-1{
+    position: relative;
     display: inline-block;
     text-align: center;
-    color: #bfc1c2;
+    color: white;
+    /* color: #bfc1c2; */
     margin: 10px;
-    padding: 10px;
+    padding: 30px;
     width: fit-content;
-    border-bottom: solid 1px;
+    border: solid 1px white;
     font-size: 60px;
+    background-color: rgba(0,0,0,.85);
 }
 
 .cta-button-container{
@@ -115,26 +134,27 @@ li{
     display: inline-block;
     margin: 20px;
     padding: 10px;
-    width: 25%;
-    background-color: #888989;
+    width: 30%;
+    background-color: white;
     border-radius: 10px;
-    border: 1px solid #888989;
+    border: 1px solid white;
+    color: #333;
+    font-size: 48px;
 }
 
 .cta-button:hover{
-    background-color: rgba(255, 0, 0, 0.5);
-    border: 1px solid rgba(255, 0, 0, 0.5);
+    background-color: #D72323;
+    border: 1px solid #D72323;
+    color: white;
 }
 
-.cta-button a{
-    color: white;
-    font-size: 24px;
-}
 
 .content-text{
     color: #333;
     font-size: 18px;
+    position: relative;
 }
+
 
 /* CONTENT SECTION 2 */
 
