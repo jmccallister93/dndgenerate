@@ -29,17 +29,11 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
 
-    for(let j=0; j<coll.length;j++){
-        var btnValue = coll[j].textContent;
-        if(btnValue === "Show"){
-            btnValue = "Hide";
-            coll[j].textContent = btnValue;
-        } else if (btnValue === "Hide"){
-            btnValue = "Show";
-            coll[j].textContent = btnValue;
-        }
+    if (this.classList.contains("active")){
+        this.textContent = "Hide"
+    } else{
+        this.textContent = "Show"
     }
-   
   });
 }
 

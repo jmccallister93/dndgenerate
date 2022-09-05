@@ -65,13 +65,14 @@ input[type=number]{
 
 .active{
     background-color: #D72323;
+
   } 
 
 .active:hover{
     background-color: #27a501;
   }
 
-  .sec-title{
+.sec-title{
     background-color: rgba(137, 4, 4, 0.358);
     width: fit-content;
     padding: 10px;
