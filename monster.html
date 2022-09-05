@@ -32,70 +32,80 @@
     <div class="content-container-2">
       <div class="form-container">
 
-        <form id="monster_form" action="" method="post">
+        <!-- Basic info -->
+        <h1 class="sec-title">Monster Basic Info</h1>
+        <button class="collapsible">Show</button>
 
-          <div class="monster-name-wrapper form-wrapper">
-            <label for="monster_name">Monster Name:</label>
-            <input type="text" id="monster_name" placeholder="Monster Name">
-          </div>
+        <form id="monster-form-basics" action="" method="post">
+            <div class="monster-name-wrapper form-wrapper">
+              <label for="monster_name">Monster Name:</label>
+              <input type="text" id="monster_name" placeholder="Monster Name">
+            </div>
 
-          <div class="monster-type-wrapper form-wrapper">
-            <label for="monster_type">Monster Type:</label>
-            <select  id="monster_type" name="monster_type" >
-              <option value="choose_type" selected>Choose Type</option>
-              <option id="custom_monster_type" value="custom">Custom</option>
-              <option value="aberration">Aberration</option>
-              <option value="beast">Beast</option>
-              <option value="celestial">Celestial</option>
-              <option value="construct">Construct</option>
-              <option value="dragon">Dragon</option>
-              <option value="elemental">Elemental</option>
-              <option value="fey">Fey</option>
-              <option value="fiend">Fiend</option>
-              <option value="giant">Giant</option>
-              <option value="humanoid">Humanoid</option>
-              <option value="monstrosity">Monstosity</option>
-              <option value="ooze">Ooze</option>
-              <option value="plant">Plant</option>
-              <option value="undead">Undead</option>
-            </select>
-          </div>
+            <div class="monster-type-wrapper form-wrapper">
+              <label for="monster_type">Monster Type:</label>
+              <select  id="monster_type" name="monster_type" >
+                <option value="choose_type" selected>-Choose One-</option>
+                <option value="aberration">Aberration</option>
+                <option value="beast">Beast</option>
+                <option value="celestial">Celestial</option>
+                <option value="construct">Construct</option>
+                <option value="dragon">Dragon</option>
+                <option value="elemental">Elemental</option>
+                <option value="fey">Fey</option>
+                <option value="fiend">Fiend</option>
+                <option value="giant">Giant</option>
+                <option value="humanoid">Humanoid</option>
+                <option value="monstrosity">Monstosity</option>
+                <option value="ooze">Ooze</option>
+                <option value="plant">Plant</option>
+                <option value="undead">Undead</option>
+              </select>
+            </div>
 
-          <div class="monster-size-wrapper form-wrapper">
-            <label for="monster_size">Size:</label>
-            <select name="monster_size" id="monster_size">
-              <option value="tiny">Tiny</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="huge">Huge</option>
-              <option value="gargantuen">Gargantuen</option>
-            </select>
-          </div>
+            <div class="monster-size-wrapper form-wrapper">
+              <label for="monster_size">Size:</label>
+              <select name="monster_size" id="monster_size">
+                <option value="choose_size" selected>-Choose One-</option>
+                <option value="tiny">Tiny</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="huge">Huge</option>
+                <option value="gargantuen">Gargantuen</option>
+              </select>
+            </div>
 
-          <div class="monster-alignment-wrapper form-wrapper">
-            <label for="monster_alignment">Alignment:</label>
-            <select name="monster_alignment" id="monster_alignment">
-              <option value="lawful_good">Lawful Good</option>
-              <option value="neutral_good">Neutral Good</option>
-              <option value="chaotic_good">Chaotic Good</option>
-              <option value="lawful_neutral">Lawful Neutral</option>
-              <option value="neutral">Neutral</option>
-              <option value="chaotic_neutral">Chaotic Neutral</option>
-              <option value="lawful_evil">Lawful Evil</option>
-              <option value="neutral_evil">Neutral Evil</option>
-              <option value="chaotic_evil">Chaotic Evil</option>
-            </select>
-          </div>
-
+            <div class="monster-alignment-wrapper form-wrapper">
+              <label for="monster_alignment">Alignment:</label>
+              <select name="monster_alignment" id="monster_alignment">
+                <option value="choose_alignment" selected>-Choose One-</option>
+                <option value="lawful_good">Lawful Good</option>
+                <option value="neutral_good">Neutral Good</option>
+                <option value="chaotic_good">Chaotic Good</option>
+                <option value="lawful_neutral">Lawful Neutral</option>
+                <option value="neutral">Neutral</option>
+                <option value="chaotic_neutral">Chaotic Neutral</option>
+                <option value="lawful_evil">Lawful Evil</option>
+                <option value="neutral_evil">Neutral Evil</option>
+                <option value="chaotic_evil">Chaotic Evil</option>
+              </select>
+            </div>
+          </form>
+        
+          <!-- AC and HP -->
+        <h1 class="sec-title">Monster Armor Health</h1>
+        <button class="collapsible">Show</button>
+          <form id="monster-form-achp" action="" method="post"> 
           <div class="monster-ac-wrapper form-wrapper">
             <label for="monster_ac">Armor Class:</label>
-            <input type="number" id="monster_ac" name="monster_ac">
+            <input type="number" id="monster_ac" name="monster_ac" placeholder="10">  
           </div>
       
           <div class="monster-ac-type-wrapper form-wrapper">
             <label for="monster_ac_type">Armor Type:</label>
             <select name="monster_ac_type" id="mosnter_ac_type">
+              <option value="choose_ac" selected>-Choose One-</option>
               <option value="none">None</option>
               <option value="padded">Padded</option>
               <option value="leather">Leather</option>
@@ -119,61 +129,69 @@
 
           <div class="monster-hp-wrapper form-wrapper">
             <label for="monster_hp">Hit Points:</label>
-            <input type="number" name="mosnter_hp" id="mosnter_hp">
+            <input type="number" name="mosnter_hp" id="mosnter_hp" placeholder="10">
           </div>
+        </form>
 
+        <!-- Speed -->
+        <h1 class="sec-title">Monster Speed</h1>
+        <button class="collapsible">Show</button>
+          <form id="monster-form-speed" action="" method="post">
           <div class="monster-speed-wrapper form-wrapper">
             <div class="speed-wrapper">
               <label for="speed">Speed:</label>
-              <input type="number" id="speed" name="speed">
+              <input type="number" id="speed" name="speed" placeholder="30" step="5"> ft
             </div>
             <div class="speed-wrapper">
               <label for="burrow_speed">Burrow Speed:</label>
-              <input type="number" id="burrow_speed" name="burrow_speed">
+              <input type="number" id="burrow_speed" name="burrow_speed" placeholder="0" step="5"> ft
             </div>
             <div class="speed-wrapper">
               <label for="climb_speed">Climb Speed:</label>
-              <input type="number" id="climb_speed" name="climb_speed">
+              <input type="number" id="climb_speed" name="climb_speed" placeholder="0" step="5"> ft
             </div>
             <div class="speed-wrapper">
               <label for="fly_speed">Fly Speed:</label>
-              <input type="number" id="fly_speed" name="fly_speed">
+              <input type="number" id="fly_speed" name="fly_speed" placeholder="0" step="5"> ft
             </div>
             <div class="speed-wrapper">
               <label for="swim_speed">Swim Speed:</label>
-              <input type="number" id="swim_speed" name="swim_speed">
+              <input type="number" id="swim_speed" name="swim_speed" placeholder="0" step="5"> ft
             </div>
-            
           </div>
+          </form>
 
+          <!-- Monster Stats -->
+        <h1 class="sec-title">Monster Stats</h1>
+        <button class="collapsible">Show</button>
+          <form id="monster-form-speed" action="" method="post">
           <div class="monster-stats-wrapper form-wrapper">
             <div class="stat-wrapper">
               <label for="monster_str">STR:</label>
-              <input type="number" name="monster_str" id="monster_str">
+              <input type="number" name="monster_str" id="monster_str" placeholder="10">
             </div>
             <div class="stat-wrapper">
               <label for="monster_dex">DEX:</label>
-              <input type="number" name="monster_dex" id="mosnter_dex">
+              <input type="number" name="monster_dex" id="mosnter_dex" placeholder="10">
             </div>
             <div class="stat-wrapper">
               <label for="monster_con">CON:</label>
-              <input type="number" name="monster_con" id="monster_con">
+              <input type="number" name="monster_con" id="monster_con" placeholder="10">
             </div>
             <div class="stat-wrapper">
               <label for="monster_int">INT:</label>
-              <input type="number" name="monster_int" id="monster_int">
+              <input type="number" name="monster_int" id="monster_int" placeholder="10">
             </div>
             <div class="stat-wrapper">
               <label for="monster_wis">WIS</label>
-              <input type="number" name="mosnter_wis" id="monster_wis">
+              <input type="number" name="mosnter_wis" id="monster_wis" placeholder="10">
             </div>
             <div class="stat-wrapper">
               <label for="monster_cha">CHA:</label>
-              <input type="number" name="monster_cha" id="monster_cha">
+              <input type="number" name="monster_cha" id="monster_cha" placeholder="10">
             </div>
           </div>
-
-        </form>
+          </form>
       </div>
     </div>
 
