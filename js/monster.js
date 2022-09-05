@@ -39,9 +39,42 @@ for (i = 0; i < coll.length; i++) {
 
 // Get form data
 var monsterName = document.getElementById("monster-name");
-var displayName = document.getElementById("monster-name-display");
+var displayName = document.getElementById("name-display");
 monsterName.addEventListener("input", (e) => {
-    displayName.innerText = monsterName.value
-    
+    displayName.innerText = monsterName.value;
 })
+
+var monsterType = document.getElementById("monster-type");
+var displayType = document.getElementById("type-display");
+monsterType.addEventListener("change", (e) => {
+    var arr = monsterType.value.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    var capArr = arr.join(" ");
+    displayType.innerText = capArr;
+})
+
+var monsterSize = document.getElementById("monster-size");
+var displaySize = document.getElementById("size-display");
+monsterSize.addEventListener("change", (e) => {
+    var arr = monsterSize.value.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    var capArr = arr.join(" ");
+    displaySize.innerText = capArr;
+})
+
+var monsterAlignment = document.getElementById("monster-alignment");
+var displayAlignment = document.getElementById("alignment-display");
+monsterAlignment.addEventListener("change", (e) => {
+    var arr = monsterAlignment.value.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    var capArr = arr.join(" ");
+    displayAlignment.innerText = capArr;
+})
+
 

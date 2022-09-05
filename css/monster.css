@@ -3,16 +3,11 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.display-stats-container{
-    grid-column: 2 /-1;
-    text-align: center;
-}
-
 .form-container{
     color: #EEEEEE;
     border: 1px solid black;
     border-radius: 10px;
-    margin: 0;
+    margin: 10px;
     padding: 2.5%;
     background-color: #444444;
     /* width: 30vw; */
@@ -88,3 +83,17 @@ input[type=number]{
     padding: 10px;
     border-radius: 10px;
   }
+
+  /* Display Stats */
+.display-stats-container{
+    grid-column: 2 /-1;
+    text-align: center;
+    margin: 10px;
+    font-size: 24px;
+}
+
+.display-monster-basics li{
+    display: block;
+    text-align: left;
+
+}
