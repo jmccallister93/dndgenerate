@@ -92,8 +92,8 @@ input[type=number]{
     font-size: 24px;
 }
 
-.display-monster-basics li{
+.display-stats-container li{
     display: block;
     text-align: left;
-
 }
+

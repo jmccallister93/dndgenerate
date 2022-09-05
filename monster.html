@@ -107,7 +107,7 @@
       
           <div class="monster-ac-type-wrapper form-wrapper">
             <label for="monster-ac-type">Armor Type:</label>
-            <select name="monster-ac-type" id="mosnter-ac-type">
+            <select name="monster-ac-type" id="monster-ac-type">
               <option value="choose-ac" selected>-Choose One-</option>
               <option value="none">None</option>
               <option value="padded">Padded</option>
@@ -132,7 +132,7 @@
 
           <div class="monster-hp-wrapper form-wrapper">
             <label for="monster-hp">Hit Points:</label>
-            <input type="number" name="mosnter-hp" id="mosnter-hp" placeholder="10">
+            <input type="number" name="monster-hp" id="monster-hp" placeholder="10">
           </div>
         </form>
 
@@ -175,7 +175,7 @@
             </div>
             <div class="stat-wrapper">
               <label for="monster-dex">DEX:</label>
-              <input type="number" name="monster-dex" id="mosnter-dex" placeholder="10">
+              <input type="number" name="monster-dex" id="monster-dex" placeholder="10">
             </div>
             <div class="stat-wrapper">
               <label for="monster-con">CON:</label>
@@ -187,7 +187,7 @@
             </div>
             <div class="stat-wrapper">
               <label for="monster-wis">WIS</label>
-              <input type="number" name="mosnter-wis" id="monster-wis" placeholder="10">
+              <input type="number" name="monster-wis" id="monster-wis" placeholder="10">
             </div>
             <div class="stat-wrapper">
               <label for="monster-cha">CHA:</label>
@@ -200,11 +200,35 @@
 
       <!-- Display stat choices -->
       <div class="display-stats-container">
-          <h1 id="name-display">test</h1>
+          <h1 id="name-display">-Monster Name-</h1>
           <ul class="display-monster-basics">
-            <li>Type: <span id="type-display" class="text-display"></span></li>
+            <li>Type: <span id="type-display"></span></li>
             <li>Size: <span id="size-display"></span></li>
             <li>Alignment: <span id="alignment-display"></span></li>
+          </ul>
+          <hr>
+          <ul class="display-monster-achp">
+            <li>AC: <span id="ac-display">test</span></li>
+            <li>Armor Type: <span id="ac-type-display"></span></li>
+            <li>Shield: <span id="shield-display"></span></li>
+            <li>Hit Points: <span id="hp-display"></span></li>
+          </ul>
+          <hr>
+          <ul class="display-monster-speed">
+            <li>Speed: <span id="speed-display"></span></li>
+            <li>Burrow: <span id="burrow-display"></span></li>
+            <li>Climb: <span id="climb-display"></span></li>
+            <li>Fly: <span id="fly-display"></span></li>
+            <li>Swim: <span id="swim-display"></span></li>
+          </ul>
+          <hr>
+          <ul class="display-monster-stats">
+            <li>STR: <span id="str-display"></span></li>
+            <li>DEX: <span id="dex-display"></span></li>
+            <li>CON: <span id="con-display"></span></li>
+            <li>INT: <span id="int-display"></span></li>
+            <li>WIS: <span id="wis-display"></span></li>
+            <li>CHA: <span id="cha-display"></span></li>
           </ul>
         
       </div>
