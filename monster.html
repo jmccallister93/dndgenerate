@@ -14,6 +14,7 @@
     <title>DnDGenerate: Monster</title>
   </head>
   <body>
+    <!-- Navbar -->
     <div class="navbar-container">
       <div class="navbar-img"><img src="img/dndgenerate.png" alt="" /></div>
       <div class="navbar-links">
@@ -25,21 +26,23 @@
       </div>
     </div>
 
+    <!-- Content Title -->
     <div class="content-container-1">
       <div class="content-title-1">Monster Creator</div>
     </div>
 
-    <div class="content-container-2">
+    <!-- Main content -->
+    <div class="content-display">
       <div class="form-container">
 
         <!-- Basic info -->
         <h1 class="sec-title">Monster Basic Info</h1>
         <button class="collapsible">Show</button>
 
-        <form id="monster-form-basics" action="" method="post">
+        <form id="monster-form-basics" method="post" onSubmit="return false;">
             <div class="monster-name-wrapper form-wrapper">
-              <label for="monster_name">Monster Name:</label>
-              <input type="text" id="monster_name" placeholder="Monster Name">
+              <label for="monster-name">Monster Name:</label>
+              <input type="text" id="monster-name" placeholder="Monster Name" oninput="">
             </div>
 
             <div class="monster-type-wrapper form-wrapper">
@@ -193,8 +196,15 @@
           </div>
           </form>
       </div>
+    
+
+      <!-- Display stat choices -->
+      <div class="display-stats-container">
+        <h1 id="monster-name-display">Current Monster</h1>
+      </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer-container">
       <p>All Rights Reserved 2022.</p>
       <ul>

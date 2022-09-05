@@ -37,3 +37,11 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+// Get form data
+var monsterName = document.getElementById("monster-name");
+var displayName = document.getElementById("monster-name-display");
+monsterName.addEventListener("input", (e) => {
+    displayName.innerText = monsterName.value
+    
+})
+

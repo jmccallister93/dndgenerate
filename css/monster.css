@@ -1,3 +1,13 @@
+.content-display{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.display-stats-container{
+    grid-column: 2 /-1;
+    text-align: center;
+}
+
 .form-container{
     color: #EEEEEE;
     border: 1px solid black;
@@ -5,7 +15,7 @@
     margin: 0;
     padding: 2.5%;
     background-color: #444444;
-    width: 30vw;
+    /* width: 30vw; */
     
 }
 
