@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/monster.css">
+    <link rel="stylesheet" href="css/monster.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -34,205 +34,450 @@
     <!-- Main content -->
     <div class="content-display">
       <div class="form-container">
-
         <!-- Basic info -->
-        <h1 class="sec-title">Monster Basic Info</h1>
-        <button class="collapsible">Show</button>
-
-        <form id="monster-form-basics" method="post" onSubmit="return false;">
-            <div class="monster-name-wrapper form-wrapper">
-              <label for="monster-name">Monster Name:</label>
-              <input type="text" id="monster-name" placeholder="Monster Name" oninput="">
-            </div>
-
-            <div class="monster-type-wrapper form-wrapper">
-              <label for="monster-type">Monster Type:</label>
-              <select  id="monster-type" name="monster-type" >
-                <option value="choose-type" selected>-Choose One-</option>
-                <option value="aberration">Aberration</option>
-                <option value="beast">Beast</option>
-                <option value="celestial">Celestial</option>
-                <option value="construct">Construct</option>
-                <option value="dragon">Dragon</option>
-                <option value="elemental">Elemental</option>
-                <option value="fey">Fey</option>
-                <option value="fiend">Fiend</option>
-                <option value="giant">Giant</option>
-                <option value="humanoid">Humanoid</option>
-                <option value="monstrosity">Monstosity</option>
-                <option value="ooze">Ooze</option>
-                <option value="plant">Plant</option>
-                <option value="undead">Undead</option>
-              </select>
-            </div>
-
-            <div class="monster-size-wrapper form-wrapper">
-              <label for="monster-size">Size:</label>
-              <select name="monster-size" id="monster-size">
-                <option value="choose-size" selected>-Choose One-</option>
-                <option value="tiny">Tiny</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="huge">Huge</option>
-                <option value="gargantuen">Gargantuen</option>
-              </select>
-            </div>
-
-            <div class="monster-alignment-wrapper form-wrapper">
-              <label for="monster-alignment">Alignment:</label>
-              <select name="monster-alignment" id="monster-alignment">
-                <option value="choose-alignment" selected>-Choose One-</option>
-                <option value="lawful-good">Lawful Good</option>
-                <option value="neutral-good">Neutral Good</option>
-                <option value="chaotic-good">Chaotic Good</option>
-                <option value="lawful-neutral">Lawful Neutral</option>
-                <option value="neutral">Neutral</option>
-                <option value="chaotic-neutral">Chaotic Neutral</option>
-                <option value="lawful-evil">Lawful Evil</option>
-                <option value="neutral-evil">Neutral Evil</option>
-                <option value="chaotic-evil">Chaotic Evil</option>
-              </select>
-            </div>
-          </form>
-        
-          <!-- AC and HP -->
-        <h1 class="sec-title">Monster Armor Health</h1>
-        <button class="collapsible">Show</button>
-          <form id="monster-form-achp" action="" method="post"> 
-          <div class="monster-ac-wrapper form-wrapper">
-            <label for="monster-ac">Armor Class:</label>
-            <input type="number" id="monster-ac" name="monster-ac" placeholder="10">  
+        <div class="accordian">
+          <button type="button" class="accordian__button">Basic Info</button>
+          <div class="accordian__content">
+            <form
+              id="monster-form-basics"
+              method="post"
+              onSubmit="return false;"
+            >
+              <div class="monster-name-wrapper form-wrapper">
+                <label for="monster-name">Monster Name:</label>
+                <input
+                  type="text"
+                  id="monster-name"
+                  placeholder="Monster Name"
+                  oninput=""
+                />
+              </div>
+              <div class="monster-type-wrapper form-wrapper">
+                <label for="monster-type">Monster Type:</label>
+                <select id="monster-type" name="monster-type">
+                  <option value="choose-type" selected>-Choose One-</option>
+                  <option value="aberration">Aberration</option>
+                  <option value="beast">Beast</option>
+                  <option value="celestial">Celestial</option>
+                  <option value="construct">Construct</option>
+                  <option value="dragon">Dragon</option>
+                  <option value="elemental">Elemental</option>
+                  <option value="fey">Fey</option>
+                  <option value="fiend">Fiend</option>
+                  <option value="giant">Giant</option>
+                  <option value="humanoid">Humanoid</option>
+                  <option value="monstrosity">Monstosity</option>
+                  <option value="ooze">Ooze</option>
+                  <option value="plant">Plant</option>
+                  <option value="undead">Undead</option>
+                </select>
+              </div>
+              <div class="monster-size-wrapper form-wrapper">
+                <label for="monster-size">Size:</label>
+                <select name="monster-size" id="monster-size">
+                  <option value="choose-size" selected>-Choose One-</option>
+                  <option value="tiny">Tiny</option>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                  <option value="huge">Huge</option>
+                  <option value="gargantuen">Gargantuen</option>
+                </select>
+              </div>
+              <div class="monster-alignment-wrapper form-wrapper">
+                <label for="monster-alignment">Alignment:</label>
+                <select name="monster-alignment" id="monster-alignment">
+                  <option value="choose-alignment" selected>
+                    -Choose One-
+                  </option>
+                  <option value="lawful-good">Lawful Good</option>
+                  <option value="neutral-good">Neutral Good</option>
+                  <option value="chaotic-good">Chaotic Good</option>
+                  <option value="lawful-neutral">Lawful Neutral</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="chaotic-neutral">Chaotic Neutral</option>
+                  <option value="lawful-evil">Lawful Evil</option>
+                  <option value="neutral-evil">Neutral Evil</option>
+                  <option value="chaotic-evil">Chaotic Evil</option>
+                </select>
+              </div>
+            </form>
           </div>
-      
-          <div class="monster-ac-type-wrapper form-wrapper">
-            <label for="monster-ac-type">Armor Type:</label>
-            <select name="monster-ac-type" id="monster-ac-type">
-              <option value="choose-ac" selected>-Choose One-</option>
-              <option value="none">None</option>
-              <option value="padded">Padded</option>
-              <option value="leather">Leather</option>
-              <option value="studded-leather">Studded Leather</option>
-              <option value="hide">Hide</option>
-              <option value="chain-shirt">Chain Shirt</option>
-              <option value="scale-mail">Scale Mail</option>
-              <option value="breastplate">Breastplate</option>
-              <option value="half-plate">Half Plate</option>
-              <option value="ring-mail">Ring Mail </option>
-              <option value="chain-mail">Chain Mail</option>
-              <option value="splint">Splint</option>
-              <option value="plate">Plate</option>
-            </select>
-          </div>
+        </div>
 
-          <div class="monster-shield-wrapper form-wrapper ">
-            <label for="shield">Shield:</label>
-            <input type="checkbox" id="shield" name="shield">
-          </div>
+        <!-- AC and HP -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">
+            Armor & Health
+          </button>
+          <div class="accordian__content">
+            <form id="monster-form-achp" action="" method="post">
+              <div class="monster-ac-wrapper form-wrapper">
+                <label for="monster-ac">Armor Class:</label>
+                <input
+                  type="number"
+                  id="monster-ac"
+                  name="monster-ac"
+                  placeholder="10"
+                />
+              </div>
 
-          <div class="monster-hp-wrapper form-wrapper">
-            <label for="monster-hp">Hit Points:</label>
-            <input type="number" name="monster-hp" id="monster-hp" placeholder="10">
+              <div class="monster-ac-type-wrapper form-wrapper">
+                <label for="monster-ac-type">Armor Type:</label>
+                <select name="monster-ac-type" id="monster-ac-type">
+                  <option value="choose-ac" selected>-Choose One-</option>
+                  <option value="none">None</option>
+                  <option value="padded">Padded</option>
+                  <option value="leather">Leather</option>
+                  <option value="studded-leather">Studded Leather</option>
+                  <option value="hide">Hide</option>
+                  <option value="chain-shirt">Chain Shirt</option>
+                  <option value="scale-mail">Scale Mail</option>
+                  <option value="breastplate">Breastplate</option>
+                  <option value="half-plate">Half Plate</option>
+                  <option value="ring-mail">Ring Mail</option>
+                  <option value="chain-mail">Chain Mail</option>
+                  <option value="splint">Splint</option>
+                  <option value="plate">Plate</option>
+                </select>
+              </div>
+
+              <div class="monster-shield-wrapper form-wrapper">
+                <label for="shield">Shield:</label>
+                <input type="checkbox" id="shield" name="shield" />
+              </div>
+
+              <div class="monster-hp-wrapper form-wrapper">
+                <label for="monster-hp">Hit Points:</label>
+                <input
+                  type="number"
+                  name="monster-hp"
+                  id="monster-hp"
+                  placeholder="10"
+                />
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
+
+        <!--Equipment-->
+        <div class="accordian">
+          <button type="button" class="accordian__button">
+            Equipment
+          </button>
+          <div class="accordian__content">
+            <form id="monster-form-equipment" action="" method="post">
+              <div class="monster-equipment-wrapper form-wrapper">
+              </div>
+            </form>
+          </div>
+        </div>
 
         <!-- Speed -->
-        <h1 class="sec-title">Monster Speed</h1>
-        <button class="collapsible">Show</button>
-          <form id="monster-form-speed" action="" method="post">
-          <div class="monster-speed-wrapper form-wrapper">
-            <div class="speed-wrapper">
-              <label for="speed">Speed:</label>
-              <input type="number" id="speed" name="speed" placeholder="30" step="5"> ft
-            </div>
-            <div class="speed-wrapper">
-              <label for="burrow-speed">Burrow Speed:</label>
-              <input type="number" id="burrow-speed" name="burrow-speed" placeholder="0" step="5"> ft
-            </div>
-            <div class="speed-wrapper">
-              <label for="climb-speed">Climb Speed:</label>
-              <input type="number" id="climb-speed" name="climb-speed" placeholder="0" step="5"> ft
-            </div>
-            <div class="speed-wrapper">
-              <label for="fly-speed">Fly Speed:</label>
-              <input type="number" id="fly-speed" name="fly-speed" placeholder="0" step="5"> ft
-            </div>
-            <div class="speed-wrapper">
-              <label for="swim-speed">Swim Speed:</label>
-              <input type="number" id="swim-speed" name="swim-speed" placeholder="0" step="5"> ft
-            </div>
+        <div class="accordian">
+          <button type="button" class="accordian__button">
+            Movement Speeds
+          </button>
+          <div class="accordian__content">
+            <form id="monster-form-speed" action="" method="post">
+              <div class="monster-speed-wrapper form-wrapper">
+                <div class="speed-wrapper">
+                  <label for="speed">Speed:</label>
+                  <input
+                    type="number"
+                    id="speed"
+                    name="speed"
+                    placeholder="30"
+                    step="5"
+                  />
+                  ft
+                </div>
+                <div class="speed-wrapper">
+                  <label for="burrow-speed">Burrow Speed:</label>
+                  <input
+                    type="number"
+                    id="burrow-speed"
+                    name="burrow-speed"
+                    placeholder="0"
+                    step="5"
+                  />
+                  ft
+                </div>
+                <div class="speed-wrapper">
+                  <label for="climb-speed">Climb Speed:</label>
+                  <input
+                    type="number"
+                    id="climb-speed"
+                    name="climb-speed"
+                    placeholder="0"
+                    step="5"
+                  />
+                  ft
+                </div>
+                <div class="speed-wrapper">
+                  <label for="fly-speed">Fly Speed:</label>
+                  <input
+                    type="number"
+                    id="fly-speed"
+                    name="fly-speed"
+                    placeholder="0"
+                    step="5"
+                  />
+                  ft
+                </div>
+                <div class="speed-wrapper">
+                  <label for="swim-speed">Swim Speed:</label>
+                  <input
+                    type="number"
+                    id="swim-speed"
+                    name="swim-speed"
+                    placeholder="0"
+                    step="5"
+                  />
+                  ft
+                </div>
+              </div>
+            </form>
           </div>
-          </form>
+        </div>
 
-          <!-- Monster Stats -->
-        <h1 class="sec-title">Monster Stats</h1>
-        <button class="collapsible">Show</button>
-          <form id="monster-form-speed" action="" method="post">
-          <div class="monster-stats-wrapper form-wrapper">
-            <div class="stat-wrapper">
-              <label for="monster-str">STR:</label>
-              <input type="number" name="monster-str" id="monster-str" placeholder="10">
-            </div>
-            <div class="stat-wrapper">
-              <label for="monster-dex">DEX:</label>
-              <input type="number" name="monster-dex" id="monster-dex" placeholder="10">
-            </div>
-            <div class="stat-wrapper">
-              <label for="monster-con">CON:</label>
-              <input type="number" name="monster-con" id="monster-con" placeholder="10">
-            </div>
-            <div class="stat-wrapper">
-              <label for="monster-int">INT:</label>
-              <input type="number" name="monster-int" id="monster-int" placeholder="10">
-            </div>
-            <div class="stat-wrapper">
-              <label for="monster-wis">WIS</label>
-              <input type="number" name="monster-wis" id="monster-wis" placeholder="10">
-            </div>
-            <div class="stat-wrapper">
-              <label for="monster-cha">CHA:</label>
-              <input type="number" name="monster-cha" id="monster-cha" placeholder="10">
-            </div>
+        <!-- Monster Stats Ability Scores -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">
+            Ability Scores
+          </button>
+          <div class="accordian__content">
+            <form id="monster-form-stats" action="" method="post">
+              <div class="monster-stats-wrapper form-wrapper">
+                <div class="stat-wrapper">
+                  <label for="monster-str">STR:</label>
+                  <input
+                    type="number"
+                    name="monster-str"
+                    id="monster-str"
+                    placeholder="10"
+                  />
+                </div>
+                <div class="stat-wrapper">
+                  <label for="monster-dex">DEX:</label>
+                  <input
+                    type="number"
+                    name="monster-dex"
+                    id="monster-dex"
+                    placeholder="10"
+                  />
+                </div>
+                <div class="stat-wrapper">
+                  <label for="monster-con">CON:</label>
+                  <input
+                    type="number"
+                    name="monster-con"
+                    id="monster-con"
+                    placeholder="10"
+                  />
+                </div>
+                <div class="stat-wrapper">
+                  <label for="monster-int">INT:</label>
+                  <input
+                    type="number"
+                    name="monster-int"
+                    id="monster-int"
+                    placeholder="10"
+                  />
+                </div>
+                <div class="stat-wrapper">
+                  <label for="monster-wis">WIS</label>
+                  <input
+                    type="number"
+                    name="monster-wis"
+                    id="monster-wis"
+                    placeholder="10"
+                  />
+                </div>
+                <div class="stat-wrapper">
+                  <label for="monster-cha">CHA:</label>
+                  <input
+                    type="number"
+                    name="monster-cha"
+                    id="monster-cha"
+                    placeholder="10"
+                  />
+                </div>
+              </div>
+            </form>
           </div>
-          </form>
+        </div>
+
+        <!-- Saving Throws -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Saving Throws</button>
+          <div class="accordian__content">
+            <form id="monster-form-saves" action="" method="post">
+              <div class="monster-saves-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Skills</button>
+          <div class="accordian__content">
+            <form id="monster-form-skills" action="" method="post">
+              <div class="monster-skills-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Vulnerabilities -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">
+            Vulnerabilities
+          </button>
+          <div class="accordian__content">
+            <form id="monster-form-vuln" action="" method="post">
+              <div class="monster-vuln-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Resistances -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Resistances</button>
+          <div class="accordian__content">
+            <form id="monster-form-resist" action="" method="post">
+              <div class="monster-resist-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Immunities -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Immunities</button>
+          <div class="accordian__content">
+            <form id="monster-form-immune" action="" method="post">
+              <div class="monster-immune-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Senses -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Senses</button>
+          <div class="accordian__content">
+            <form id="monster-form-senses" action="" method="post">
+              <div class="monster-senses-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Languages</button>
+          <div class="accordian__content">
+            <form id="monster-form-lang" action="" method="post">
+              <div class="monster-lang-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Abilites -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Abilites</button>
+          <div class="accordian__content">
+            <form id="monster-form-abilities" action="" method="post">
+              <div class="monster-abilities-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Spells -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Spells</button>
+          <div class="accordian__content">
+            <form id="monster-form-spells" action="" method="post">
+              <div class="monster-spells-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Actions</button>
+          <div class="accordian__content">
+            <form id="monster-form-actions" action="" method="post">
+              <div class="monster-actions-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Reactions -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Reactions</button>
+          <div class="accordian__content">
+            <form id="monster-form-reactions" action="" method="post">
+              <div class="monster-reactions-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Legendary Actions -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">
+            Legendary Actions
+          </button>
+          <div class="accordian__content">
+            <form id="monster-form-legendary" action="" method="post">
+              <div class="monster-legendary-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Lair Actions -->
+        <div class="accordian">
+          <button type="button" class="accordian__button">Lair Actions</button>
+          <div class="accordian__content">
+            <form id="monster-form-lair" action="" method="post">
+              <div class="monster-lair-wrapper form-wrapper"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Last Div -->
       </div>
-    
 
       <!-- Display stat choices -->
       <div class="display-stats-container">
-          <h1 id="name-display">-Monster Name-</h1>
-          <ul class="display-monster-basics">
-            <li>Type: <span id="type-display"></span></li>
-            <li>Size: <span id="size-display"></span></li>
-            <li>Alignment: <span id="alignment-display"></span></li>
-          </ul>
-          <hr>
-          <ul class="display-monster-achp">
-            <li>AC: <span id="ac-display">test</span></li>
-            <li>Armor Type: <span id="ac-type-display"></span></li>
-            <li>Shield: <span id="shield-display"></span></li>
-            <li>Hit Points: <span id="hp-display"></span></li>
-          </ul>
-          <hr>
-          <ul class="display-monster-speed">
-            <li>Speed: <span id="speed-display"></span></li>
-            <li>Burrow: <span id="burrow-display"></span></li>
-            <li>Climb: <span id="climb-display"></span></li>
-            <li>Fly: <span id="fly-display"></span></li>
-            <li>Swim: <span id="swim-display"></span></li>
-          </ul>
-          <hr>
-          <ul class="display-monster-stats">
-            <li>STR: <span id="str-display"></span></li>
-            <li>DEX: <span id="dex-display"></span></li>
-            <li>CON: <span id="con-display"></span></li>
-            <li>INT: <span id="int-display"></span></li>
-            <li>WIS: <span id="wis-display"></span></li>
-            <li>CHA: <span id="cha-display"></span></li>
-          </ul>
-        
+        <h1 id="name-display">-Monster Name-</h1>
+        <ul class="display-monster-basics">
+          <li>Type: <span id="type-display"></span></li>
+          <li>Size: <span id="size-display"></span></li>
+          <li>Alignment: <span id="alignment-display"></span></li>
+        </ul>
+        <hr />
+        <ul class="display-monster-achp">
+          <li>AC: <span id="ac-display">test</span></li>
+          <li>Armor Type: <span id="ac-type-display"></span></li>
+          <li>Shield: <span id="shield-display"></span></li>
+          <li>Hit Points: <span id="hp-display"></span></li>
+        </ul>
+        <hr />
+        <ul class="display-monster-speed">
+          <li>Speed: <span id="speed-display"></span></li>
+          <li>Burrow: <span id="burrow-display"></span></li>
+          <li>Climb: <span id="climb-display"></span></li>
+          <li>Fly: <span id="fly-display"></span></li>
+          <li>Swim: <span id="swim-display"></span></li>
+        </ul>
+        <hr />
+        <ul class="display-monster-stats">
+          <li>STR: <span id="str-display"></span></li>
+          <li>DEX: <span id="dex-display"></span></li>
+          <li>CON: <span id="con-display"></span></li>
+          <li>INT: <span id="int-display"></span></li>
+          <li>WIS: <span id="wis-display"></span></li>
+          <li>CHA: <span id="cha-display"></span></li>
+        </ul>
       </div>
-
     </div>
 
     <!-- Footer -->

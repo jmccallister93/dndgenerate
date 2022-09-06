@@ -50,13 +50,51 @@ input[type=number]{
     text-align: left;
 }
 
-.form-container form{
+/* .form-container form{
     display: none;
     overflow: hidden;
     margin: 20px;
+} */
+
+.accordian__button{
+    font-size: 24px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgba(137, 4, 4);
+    color: #ffffff;
+    text-align: left;
 }
 
-.collapsible{
+.accordian__button::after{
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.accordian__button--active + .accordian__content{
+    display: block;
+}
+
+.accordian__button--active{
+    background: #D72323;
+}
+
+.accordian__button--active::after{
+    content: '\25b4';
+}
+
+.accordian__content{
+    padding: 0 15px;
+    
+    display: none;
+    overflow: auto;
+}
+
+/* .collapsible{
     font-size: 24px; 
     border-radius: 10px;
     width: 50%;
@@ -65,7 +103,7 @@ input[type=number]{
 
 .collapsible:hover {
     background-color: #27a501;
-    /* color: #303841; */
+ color: #303841; 
   }
 
 .active{
@@ -75,7 +113,9 @@ input[type=number]{
 
 .active:hover{
     background-color: #27a501;
-  }
+  } 
+
+*/
 
 .sec-title{
     background-color: rgba(137, 4, 4, 0.358);

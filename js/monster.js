@@ -16,26 +16,37 @@
 // })
 
 // Button collapse
-var coll = document.getElementsByClassName("collapsible");
-var i;
+// var collapseBtn = document.getElementsByClassName("collapsible");
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
+// var i;
 
-    if (this.classList.contains("active")){
-        this.textContent = "Hide"
-    } else{
-        this.textContent = "Show"
-    }
-  });
-}
+// for (i = 0; i < collapseBtn.length; i++) {
+//   collapseBtn[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var content = this.nextElementSibling;
+//     if (content.style.display === "block") {
+//         content.style.display = "none";
+//     } else {
+//         content.style.display = "block";
+//     }
+//     const btnText = this.textContent;
+//     if (this.classList.contains("active")){
+//         this.textContent = "Hide"
+//     } else{
+//         this.textContent = btnText;
+//     }
+    
+//   });
+// }
+
+
+document.querySelectorAll('.accordian__button').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordianContent = button.nextElementSibling;
+
+        button.classList.toggle('accordian__button--active');
+    })
+})
 
 // Get form data
 var monsterName = document.getElementById("monster-name");
