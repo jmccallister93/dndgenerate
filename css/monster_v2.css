@@ -1,16 +1,33 @@
 .content-display{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .form-container{
-    color: #EEEEEE;
+    color: #303841;
     /* border: 1px solid #303841; */
     border-radius: 10px;
     margin: 10px;
     padding: 2.5%;
     /* background-color: #444444;    */
 }
+
+.progress-button{
+    display: flex;
+    justify-content: right;
+}
+
+.next-button{
+    background: #303841;
+    font-size: 24px;
+    width: 15%;
+    border-radius: 10px;
+}
+
+.slide-one{
+
+}
+
 .form-wrapper{
     font-size: 24px;
     display: flex;
@@ -31,21 +48,6 @@ input[type=number]{
     width: 65px;
 }
 
-/* .monster-name-wrapper{
-    margin-left: 7.5vw;
-} */
-
-
-
-/* .monster-name-wrapper{
-    width: -70%;
-} */
-
-#shield{
-    transform: scale(2);
-    height: 1.5rem;
-}
-
 .form-wrapper > * {
     margin: 1%;
 }
@@ -56,43 +58,6 @@ input[type=number]{
     text-align: left;
 }
 
-.accordian__button{
-    font-size: 24px;
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #303841;
-    color: #ffffff;
-    text-align: left;
-}
-
-.accordian__button::after{
-    content: '\25be';
-    float: right;
-    transform: scale(1.5);
-}
-
-.accordian__button--active + .accordian__content{
-    display: block;
-}
-
-.accordian__button--active{
-    background: #D72323;
-}
-
-.accordian__button--active::after{
-    content: '\25b4';
-}
-
-.accordian__content{
-    padding: 15px;
-    display: none;
-    overflow: auto;
-    background-color: #171717 ;
-}
 
   /* Display Stats */
 

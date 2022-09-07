@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/monster_v2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js/monster_v2.js" defer></script>
+    <title>DnDGenerate: Monster</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar-container">
+      <div class="navbar-img"><img src="img/dndgenerate.png" alt="" /></div>
+      <div class="navbar-links">
+        <ul>
+          <li class="navbar-links-li"><a href="index.html">Home</a></li>
+          <li class="navbar-links-li"><a href="create.html">Create</a></li>
+          <li class="navbar-links-li"><a href="signup.html">Sign-Up</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Content Title -->
+    <div class="content-container-1">
+      <div class="content-title-1">Monster Creator</div>
+    </div>
+
+    <!-- Light Dark Mode -->
+   
+
+    <!-- Main content -->
+    <div class="content-display">
+      <div class="form-container">
+        <div class="slide-one">
+        <!-- Basic info -->
+        <div class="progress-button">
+          <button type="button" class="next-button">Next &rsaquo;</button>
+        </div>
+          <div class="accordian__content">
+            <form
+              id="monster-form-basics"
+              method="post"
+              onSubmit="return false;"
+            >
+              <div class="monster-name-wrapper form-wrapper">
+                <label for="monster-name">Name:</label>
+                <input
+                  type="text"
+                  id="monster-name"
+                  placeholder="Monster Name"
+                  oninput=""
+                />
+              </div>
+              <div class="monster-type-wrapper form-wrapper">
+                <label for="monster-type">Type:</label>
+                <select id="monster-type" name="monster-type">
+                  <option value="choose-type" selected>-Choose One-</option>
+                  <option value="aberration">Aberration</option>
+                  <option value="beast">Beast</option>
+                  <option value="celestial">Celestial</option>
+                  <option value="construct">Construct</option>
+                  <option value="dragon">Dragon</option>
+                  <option value="elemental">Elemental</option>
+                  <option value="fey">Fey</option>
+                  <option value="fiend">Fiend</option>
+                  <option value="giant">Giant</option>
+                  <option value="humanoid">Humanoid</option>
+                  <option value="monstrosity">Monstosity</option>
+                  <option value="ooze">Ooze</option>
+                  <option value="plant">Plant</option>
+                  <option value="undead">Undead</option>
+                </select>
+              </div>
+              <div class="monster-size-wrapper form-wrapper">
+                <label for="monster-size">Size:</label>
+                <select name="monster-size" id="monster-size">
+                  <option value="choose-size" selected>-Choose One-</option>
+                  <option value="tiny">Tiny</option>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                  <option value="huge">Huge</option>
+                  <option value="gargantuen">Gargantuen</option>
+                </select>
+              </div>
+              <div class="monster-alignment-wrapper form-wrapper">
+                <label for="monster-alignment">Alignment:</label>
+                <select name="monster-alignment" id="monster-alignment">
+                  <option value="choose-alignment" selected>
+                    -Choose One-
+                  </option>
+                  <option value="lawful-good">Lawful Good</option>
+                  <option value="neutral-good">Neutral Good</option>
+                  <option value="chaotic-good">Chaotic Good</option>
+                  <option value="lawful-neutral">Lawful Neutral</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="chaotic-neutral">Chaotic Neutral</option>
+                  <option value="lawful-evil">Lawful Evil</option>
+                  <option value="neutral-evil">Neutral Evil</option>
+                  <option value="chaotic-evil">Chaotic Evil</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+
+        <!-- Last Div -->
+      </div>
+
+      <!-- Display stat choices -->
+      <div class="display-stats-container">
+        <h1 id="name-display">-Monster Name-</h1>
+        <ul class="display-monster-basics">
+          <li>Type: <span id="type-display"></span></li>
+          <li>Size: <span id="size-display"></span></li>
+          <li>Alignment: <span id="alignment-display"></span></li>
+        </ul>
+        <hr />
+        <ul class="display-monster-achp">
+          <li>AC: <span id="ac-display">test</span></li>
+          <li>Armor Type: <span id="ac-type-display"></span></li>
+          <li>Shield: <span id="shield-display"></span></li>
+          <li>Hit Points: <span id="hp-display"></span></li>
+        </ul>
+        <hr />
+        <ul class="display-monster-speed">
+          <li>Speed: <span id="speed-display"></span></li>
+          <li>Burrow: <span id="burrow-display"></span></li>
+          <li>Climb: <span id="climb-display"></span></li>
+          <li>Fly: <span id="fly-display"></span></li>
+          <li>Swim: <span id="swim-display"></span></li>
+        </ul>
+        <hr />
+        <ul class="display-monster-stats">
+          <li>STR: <span id="str-display"></span></li>
+          <li>DEX: <span id="dex-display"></span></li>
+          <li>CON: <span id="con-display"></span></li>
+          <li>INT: <span id="int-display"></span></li>
+          <li>WIS: <span id="wis-display"></span></li>
+          <li>CHA: <span id="cha-display"></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+      <p>All Rights Reserved 2022.</p>
+      <ul>
+        <li class="social-li">
+          <a href="#" target="-blank" class="fa fa-instagram"></a>
+        </li>
+        <li class="social-li">
+          <a href="#" target="-blank" class="fa fa-facebook"></a>
+        </li>
+        <li class="social-li">
+          <a href="#" target="-blank" class="fa fa-google"></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
