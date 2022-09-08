@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/monster.css" />
+    <link rel="stylesheet" href="css/modal.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="js/monster.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <!-- <script src="js/5eapi.js" defer></script> -->
     <title>DnDGenerate: Monster</title>
   </head>
   <body>
@@ -164,7 +167,18 @@
           <button type="button" class="accordian__button">Equipment</button>
           <div class="accordian__content">
             <form id="monster-form-equipment" action="" method="post">
-              <div class="monster-equipment-wrapper form-wrapper"></div>
+              <div class="monster-equipment-wrapper form-wrapper">
+                <!-- Trigger/Open The Modal -->
+                <div id="modal-btn">Equipment List &plus;</div>
+                <!-- The Modal -->
+                <div id="equipment-modal" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Some text in the Modal..</p>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -437,9 +451,10 @@
             </form>
           </div>
         </div>
-
         <!-- Last Div -->
       </div>
+
+      <!-- <div id="root"></div> -->
 
       <!-- Display stat choices -->
       <div class="display-stats-container">
@@ -447,12 +462,16 @@
         <ul class="display-monster-basics">
           <li class="li-display">Type: <span id="type-display"></span></li>
           <li class="li-display">Size: <span id="size-display"></span></li>
-          <li class="li-display">Alignment: <span id="alignment-display"></span></li>
+          <li class="li-display">
+            Alignment: <span id="alignment-display"></span>
+          </li>
         </ul>
         <hr />
         <ul class="display-monster-achp">
           <li class="li-display">AC: <span id="ac-display">test</span></li>
-          <li class="li-display">Armor Type: <span id="ac-type-display"></span></li>
+          <li class="li-display">
+            Armor Type: <span id="ac-type-display"></span>
+          </li>
           <li class="li-display">Shield: <span id="shield-display"></span></li>
           <li class="li-display">Hit Points: <span id="hp-display"></span></li>
         </ul>
