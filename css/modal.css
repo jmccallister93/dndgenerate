@@ -12,11 +12,16 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
 
+  #modal-btn{
+    transition: 0.3s;
+  }
+
   #modal-btn:hover{
     padding: 10px;
     box-shadow: 1px 1px 15px 1px white;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
   }
   
   /* Modal Content/Box */
@@ -42,3 +47,13 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  .modal-content-info{
+    color: #303841
+  }
+
+  input[type=text] {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 0;
+}
