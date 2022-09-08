@@ -1,44 +1,10 @@
-// var monsterForm = document.querySelector("#monster_form");
-
-// monsterForm.addEventListener('change', (event) => {
-    
-//     var customTypeInput = document.createElement("input");
-//     customTypeInput.setAttribute('id',"custom_monster_type");
-
-//     var monsterType = document.getElementById("monster_type").value;
-
-//     if(monsterType === 'custom' ){
-//         monsterForm.appendChild(customTypeInput);
-//     } 
-//     else if(monsterType !== 'custom') {
-//         document.getElementById('custom_monster_type').remove();
-//     }
-// })
-
-// Button collapse
-// var collapseBtn = document.getElementsByClassName("collapsible");
-
-// var i;
-
-// for (i = 0; i < collapseBtn.length; i++) {
-//   collapseBtn[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var content = this.nextElementSibling;
-//     if (content.style.display === "block") {
-//         content.style.display = "none";
-//     } else {
-//         content.style.display = "block";
-//     }
-//     const btnText = this.textContent;
-//     if (this.classList.contains("active")){
-//         this.textContent = "Hide"
-//     } else{
-//         this.textContent = btnText;
-//     }
-    
-//   });
-// }
-
+ // Scroll to a certain element on click
+var title = document.getElementsByClassName('content-title-1')[0];
+title.addEventListener('click', function (event) {
+    document.querySelector('.content-display').scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+ });
 
 document.querySelectorAll('.accordian__button').forEach(button => {
     button.addEventListener('click', () => {
@@ -106,15 +72,15 @@ monsterACType.addEventListener("change", (e) => {
     displayACType.innerText = capArr;
 })
 
-var monsterShield = document.getElementById("shield");
-var displayShield = document.getElementById("shield-display");
-monsterShield.addEventListener("change", (e) => {
-    if (e.target.checked){
-        displayShield.innerText = "Yes";
-    } else{
-        displayShield.innerText = "None";
-    }
-})
+// var monsterShield = document.getElementById("shield");
+// var displayShield = document.getElementById("shield-display");
+// monsterShield.addEventListener("change", (e) => {
+//     if (e.target.checked){
+//         displayShield.innerText = "Yes";
+//     } else{
+//         displayShield.innerText = "None";
+//     }
+// })
 
 var monsterHP = document.getElementById("monster-hp");
 var displayHP = document.getElementById("hp-display");

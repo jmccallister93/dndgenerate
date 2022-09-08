@@ -15,24 +15,25 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="navbar-container">
-      <div class="navbar-img"><img src="img/dndgenerate.png" alt="" /></div>
-      <div class="navbar-links">
-        <ul>
-          <li class="navbar-links-li"><a href="index.html">Home</a></li>
-          <li class="navbar-links-li"><a href="create.html">Create</a></li>
-          <li class="navbar-links-li"><a href="signup.html">Sign-Up</a></li>
-        </ul>
+    <div class="top-container">
+      <div class="navbar-container">
+        <div class="navbar-img">DnDGenerate</div>
+        <div class="navbar-links">
+          <ul>
+            <li class="navbar-links-li"><a href="index.html">Home</a></li>
+            <li class="navbar-links-li"><a href="create.html">Create</a></li>
+            <li class="navbar-links-li"><a href="signup.html">Sign-Up</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Content Title -->
+      <div class="content-container-1">
+        <div class="content-title-1" id="monster-title">Monster Creator</div>
       </div>
     </div>
 
-    <!-- Content Title -->
-    <div class="content-container-1">
-      <div class="content-title-1">Monster Creator</div>
-    </div>
-
     <!-- Light Dark Mode -->
-   
 
     <!-- Main content -->
     <div class="content-display">
@@ -145,11 +146,6 @@
                 </select>
               </div>
 
-              <div class="monster-shield-wrapper form-wrapper">
-                <label for="shield">Shield:</label>
-                <input type="checkbox" id="shield" name="shield" />
-              </div>
-
               <div class="monster-hp-wrapper form-wrapper">
                 <label for="monster-hp">Hit Points:</label>
                 <input
@@ -165,13 +161,10 @@
 
         <!--Equipment-->
         <div class="accordian">
-          <button type="button" class="accordian__button">
-            Equipment
-          </button>
+          <button type="button" class="accordian__button">Equipment</button>
           <div class="accordian__content">
             <form id="monster-form-equipment" action="" method="post">
-              <div class="monster-equipment-wrapper form-wrapper">
-              </div>
+              <div class="monster-equipment-wrapper form-wrapper"></div>
             </form>
           </div>
         </div>
@@ -452,33 +445,33 @@
       <div class="display-stats-container">
         <h1 id="name-display">-Monster Name-</h1>
         <ul class="display-monster-basics">
-          <li>Type: <span id="type-display"></span></li>
-          <li>Size: <span id="size-display"></span></li>
-          <li>Alignment: <span id="alignment-display"></span></li>
+          <li class="li-display">Type: <span id="type-display"></span></li>
+          <li class="li-display">Size: <span id="size-display"></span></li>
+          <li class="li-display">Alignment: <span id="alignment-display"></span></li>
         </ul>
         <hr />
         <ul class="display-monster-achp">
-          <li>AC: <span id="ac-display">test</span></li>
-          <li>Armor Type: <span id="ac-type-display"></span></li>
-          <li>Shield: <span id="shield-display"></span></li>
-          <li>Hit Points: <span id="hp-display"></span></li>
+          <li class="li-display">AC: <span id="ac-display">test</span></li>
+          <li class="li-display">Armor Type: <span id="ac-type-display"></span></li>
+          <li class="li-display">Shield: <span id="shield-display"></span></li>
+          <li class="li-display">Hit Points: <span id="hp-display"></span></li>
         </ul>
         <hr />
         <ul class="display-monster-speed">
-          <li>Speed: <span id="speed-display"></span></li>
-          <li>Burrow: <span id="burrow-display"></span></li>
-          <li>Climb: <span id="climb-display"></span></li>
-          <li>Fly: <span id="fly-display"></span></li>
-          <li>Swim: <span id="swim-display"></span></li>
+          <li class="li-display">Speed: <span id="speed-display"></span></li>
+          <li class="li-display">Burrow: <span id="burrow-display"></span></li>
+          <li class="li-display">Climb: <span id="climb-display"></span></li>
+          <li class="li-display">Fly: <span id="fly-display"></span></li>
+          <li class="li-display">Swim: <span id="swim-display"></span></li>
         </ul>
         <hr />
         <ul class="display-monster-stats">
-          <li>STR: <span id="str-display"></span></li>
-          <li>DEX: <span id="dex-display"></span></li>
-          <li>CON: <span id="con-display"></span></li>
-          <li>INT: <span id="int-display"></span></li>
-          <li>WIS: <span id="wis-display"></span></li>
-          <li>CHA: <span id="cha-display"></span></li>
+          <li class="li-display">STR: <span id="str-display"></span></li>
+          <li class="li-display">DEX: <span id="dex-display"></span></li>
+          <li class="li-display">CON: <span id="con-display"></span></li>
+          <li class="li-display">INT: <span id="int-display"></span></li>
+          <li class="li-display">WIS: <span id="wis-display"></span></li>
+          <li class="li-display">CHA: <span id="cha-display"></span></li>
         </ul>
       </div>
     </div>
