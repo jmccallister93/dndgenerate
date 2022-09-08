@@ -40,15 +40,6 @@ li{
     background-attachment: fixed;
 }
 
-.top-container-generator{
-    height: 100%;
-    width: 100%;
-    background-image: url('/home/topshelf/repos/dndgenerate/img/bronze_dice-modified.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .navbar-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -166,40 +157,6 @@ li{
     font-size: 18px;
     position: relative;
 }
-
-/* Cards */
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 white;
-    transition: 0.3s;
-    color: white;
-    width: fit-content;
-    font-size: 36px;
-    margin: 50px;
-    background-color: rgba(84, 84, 84, 0.8);
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 #D72323;
-  }
-  
-  /* Add some padding inside the card container */
-  .card-container {
-    padding: 2px 16px;
-    
-  }
-
-  .card-img{
-    width: 300px;
-    height: 400px;
-  }
-
-  .card-text{
-    padding: 5px;
-    text-shadow: 5px 5px 2px black;
-  }
-
 
 
 /* CONTENT SECTION 2 */
