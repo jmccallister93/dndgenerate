@@ -101,7 +101,13 @@
 
 .item-category-content{
     padding: 15px;
-    display: none;
+    display: inline-block;
     overflow: auto;
     background-color: #303841c0;
+    height: max-content;
+}
+
+#root{
+    display: inline-block;
+    height: 100px;
 }
