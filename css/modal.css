@@ -31,6 +31,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    height: 50%;
   }
   
   /* The Close Button */
@@ -49,11 +50,58 @@
   }
 
   .modal-content-info{
-    color: #303841
+    display: grid;
+    color: #303841;
+    margin: 5px;
+    padding: 5px;
+    height: 15%;
   }
 
-  input[type=text] {
+ .search-bar {
+    width: 25%;
     padding: 5px;
-    margin: 5px;
-    border-radius: 0;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.equipment-item{
+    display: inline-block;
+    margin: 20px;
+    padding: 5px;
+}
+
+.item-category-button{
+    color: white;
+    display: block;
+    padding: 5px;
+    border: 1px solid #303841;
+    background-color: #303841;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.item-category-button:hover{
+    padding: 10px;
+    box-shadow: 1px 1px 15px 1px #D72323;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.item-category-button--active + .item-category-content {
+    display: block;
+  }
+  
+.item-category-button--active{
+    background-color: #D72323;
+}
+
+.item-category-button--active:hover {
+    box-shadow: 1px 1px 15px 1px #303841;
+  }
+
+.item-category-content{
+    padding: 15px;
+    display: none;
+    overflow: auto;
+    background-color: #303841c0;
 }

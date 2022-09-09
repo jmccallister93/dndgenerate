@@ -9,7 +9,6 @@ title.addEventListener('click', function (event) {
 document.querySelectorAll('.accordian__button').forEach(button => {
     button.addEventListener('click', () => {
         const accordianContent = button.nextElementSibling;
-
         button.classList.toggle('accordian__button--active');
     })
 })
@@ -71,16 +70,6 @@ monsterACType.addEventListener("change", (e) => {
     var capArr = arr.join(" ");
     displayACType.innerText = capArr;
 })
-
-// var monsterShield = document.getElementById("shield");
-// var displayShield = document.getElementById("shield-display");
-// monsterShield.addEventListener("change", (e) => {
-//     if (e.target.checked){
-//         displayShield.innerText = "Yes";
-//     } else{
-//         displayShield.innerText = "None";
-//     }
-// })
 
 var monsterHP = document.getElementById("monster-hp");
 var displayHP = document.getElementById("hp-display");

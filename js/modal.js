@@ -23,3 +23,18 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+var items = document.getElementsByClassName('.item-category-content')
+
+document.querySelectorAll('.item-category-button').forEach(button => {
+  button.addEventListener('click', () => {
+      const categoryContent = button.nextElementSibling;
+      button.classList.toggle('.item-category--active');
+      
+      // if (items.style.display === "block"){
+      //   items.style.display ="none";
+      // } else{
+      //   items.style.display="block";
+      // }
+  })
+})
