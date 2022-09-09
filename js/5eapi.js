@@ -1,26 +1,28 @@
-// Create a request variable and assign a new XMLHttpRequest object to it.
-var request = new XMLHttpRequest()
+// Get JSON files
+async function populate(){
+    const requestURL = 'https://api.open5e.com/armor'
+    const request = new Request(requestURL)
+    const response = await fetch(request)
+    const armor = await response.json()
+    var armorResults = armor.results
+    var armorName = []
 
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://api.open5e.com/armor', true)
+    armorResults.forEach(name => {
+        armorName.push(name.name)
+    })
 
-request.onload = function () {
-  // Begin accessing JSON data here
-    var data = JSON.parse(this.response);
-        
-        data.results.forEach(armors => {
-          var armor = armors.name
-          var armorName = []
-          armorName.push(armor)
-          var list = document.getElementById('root')
-          list.append(armorName)  
-        });
-    }
+    console.log(armorName)
 
-// Send request
-request.send()
+    
+}
+
+// function populateArmorName(obj){
+//     const armorName = document.getElementById('root')
+//     const myH1 = document.createElement('h1')
+//     myH1.textContent = obj.results['name'] 
+//     armorName.appendChild(myH1)}
 
 
+// populateArmorName(armor)
 
-// var push = document.getElementsByClassName('.push-here')
-// push.appendChild(armor)
+populate()
