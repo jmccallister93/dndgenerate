@@ -11,16 +11,22 @@ async function populate(){
         armorName.push(name.name)
     })
 
-    console.log(armorName)
-
-    
+    // console.log(armorName.length)
+    populateArmorName(armorName)
 }
 
-// function populateArmorName(obj){
-//     const armorName = document.getElementById('root')
-//     const myH1 = document.createElement('h1')
-//     myH1.textContent = obj.results['name'] 
-//     armorName.appendChild(myH1)}
+
+function populateArmorName(obj){
+    const namePlaceholder = document.getElementById('root')
+
+    for(let i=0; i < obj.length; i++){
+        var mySpan = document.createElement('span')
+        mySpan.textContent = obj[i]
+        namePlaceholder.appendChild(mySpan)
+    }
+    
+    
+}
 
 
 // populateArmorName(armor)
