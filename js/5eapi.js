@@ -5,14 +5,23 @@ async function populate(){
     const response = await fetch(request)
     const armor = await response.json()
     var armorResults = armor.results
-    var armorName = []
+    var armorItems = []
 
-    armorResults.forEach(name => {
-        armorName.push(name.name)
+    // console.log(armorResults[0].name, armorResults[0].cost)
+    for(let x=0; x<armorResults.length; x++){
+        delete armorResults[x]['slug']
+        delete armorResults[x]['document__slug']
+        delete armorResults[x]['document__title']
+        delete armorResults[x]['document__license_url']
+    }
+
+    console.log(armorResults[0])
+
+    armorResults.forEach((item) => {
+        armorItems.push(item.name, item.cost)
     })
 
-    // console.log(armorName.length)
-    populateArmorName(armorName)
+    populateArmorName(armorItems)
 }
 
 
