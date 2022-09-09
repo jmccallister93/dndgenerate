@@ -23,6 +23,7 @@ function populateArmorName(obj){
         var mySpan = document.createElement('span')
         mySpan.textContent = obj[i]
         namePlaceholder.appendChild(mySpan)
+        mySpan.classList.add('test-span')
     }
     
     

@@ -104,10 +104,15 @@
     display: inline-block;
     overflow: auto;
     background-color: #303841c0;
-    height: max-content;
+    height: 35vh;
 }
 
 #root{
     display: inline-block;
-    height: 100px;
+}
+
+.test-span{
+    display: block;
+    color: white;
+    padding: 5px;
 }
