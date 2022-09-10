@@ -65,9 +65,9 @@
     border-radius: 5px;
 }
 
-.equipment-item{
-    display: inline-block;
-    margin: 20px;
+.equipment-tabs{
+    display: flex;
+    margin: 5px;
     padding: 5px;
 }
 
@@ -75,6 +75,7 @@
     color: white;
     display: block;
     padding: 5px;
+    margin: 2px;
     border: 1px solid #303841;
     background-color: #303841;
     border-radius: 5px;
@@ -87,6 +88,7 @@
     transition: 0.3s;
     cursor: pointer;
 }
+
 .item-category-content{
     display: none;
 }

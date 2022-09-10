@@ -1,7 +1,7 @@
 // Get JSON files
 async function populate(){
     // Get JSON File
-    const requestURL = 'https://api.open5e.com/armor'
+    const requestURL = 'https://api.open5e.com/weapons'
     const request = new Request(requestURL)
     const response = await fetch(request)
     const armor = await response.json()
@@ -47,8 +47,6 @@ async function populate(){
         }
     }
 
-    
-    
     // Get objects in array
     for(var p of Object.values(armorResults)){
             pairs = p
@@ -86,11 +84,5 @@ function populateHeaders(obj){
     id.appendChild(mySpan)
     mySpan.classList.add('item-headers')
 }
-
-function capitalizeFirstLetter(string) {
-    const capitalLetter = string.charAt(0).toUpperCase() + string.slice(1);
-    return capitalLetter
-}
-
 
 populate()

@@ -13,7 +13,8 @@
     />
     <script src="js/monster.js" defer></script>
     <script src="js/modal.js" defer></script>
-    <script src="js/5eapi.js" defer></script>
+    <script src="js/5eapi-armor.js" defer></script>
+    <script src="js/5eapi-weapons.js" defer></script>
     <title>DnDGenerate: Monster</title>
   </head>
   <body>
@@ -181,18 +182,28 @@
                         type="text"
                         placeholder="Search..."
                       />
-                      <div class="equipment-items">
+                      <!-- Tabs -->
+                      <div class="equipment-tabs">
                         <span
                           class="item-category-tab"
-                          id="item-catergory-tab"
-                          >Armor
+                          id="item-catergory-tab">
+                          Armor
+                        </span>
+                        <span
+                          class="item-category-tab"
+                          id="item-catergory-tab">
+                          Weapons
+                        </span>
+                        <span
+                          class="item-category-tab"
+                          id="item-catergory-tab">
+                          Magic Items
                         </span>
                       </div>
                       <!-- Display Items -->
                       <div
                         class="item-category-content"
-                        id="item-category-content"
-                      >
+                        id="item-category-content">
                         <div id="item-titles"></div>
                         <div id="item-info"></div>
                       </div>

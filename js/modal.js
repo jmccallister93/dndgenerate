@@ -24,6 +24,7 @@ window.onclick = function(event) {
   }
 }
 
+// Create show/hide tabs based on click event
 var items = document.getElementById('item-category-content')
 
 document.querySelectorAll('.item-category-tab').forEach(tab => {
@@ -31,15 +32,8 @@ document.querySelectorAll('.item-category-tab').forEach(tab => {
       const categoryContent = tab.nextElementSibling;
       tab.classList.toggle('item-category-tab--active');
       items.classList.toggle('item-category-content--show')  
-
-
-      // if (items.style.display === "none"){
-      //   items.classList.toggle()
-      // } else{
-      //   items.style.display="block";
-      // }
   })
 })
 
-console.log('yes')
+
 
