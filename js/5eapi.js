@@ -6,20 +6,47 @@ async function populate(){
     const armor = await response.json()
     var armorResults = armor.results
     var armorItems = []
+    var armorItemsObj = {}
 
-    // console.log(armorResults[0].name, armorResults[0].cost)
+    
     for(let x=0; x<armorResults.length; x++){
         delete armorResults[x]['slug']
         delete armorResults[x]['document__slug']
         delete armorResults[x]['document__title']
         delete armorResults[x]['document__license_url']
+        // delete armorResults[x][]
     }
 
-    console.log(armorResults[0])
+    
+ 
+    for(var p of Object.values(armorResults)){
+            pairs = p
+            // console.log(pairs)
+            for ( var k of Object.keys(pairs)){
+                keys = k
+                console.log(keys)
+            }
+            for (var v of Object.values(pairs)){
+                values = v
+                console.log(values)
+            }
+        }
+    
 
-    armorResults.forEach((item) => {
-        armorItems.push(item.name, item.cost)
-    })
+    // for(var k of Object.values(armorResults)){
+    //     console.log(k)
+    // }
+    
+    // for (var key in Object.entries(armorResults)){
+    //     console.log(`${key}`)
+    // }
+
+    // for(let i=0; i < armorResults.length; i++){
+    //     armorItemsObj.push(i)
+    // }
+    
+
+
 
     populateArmorName(armorItems)
 }
