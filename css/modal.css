@@ -101,7 +101,7 @@
 
 .item-category-content{
     padding: 15px;
-    display: inline-block;
+    display: grid;
     overflow: auto;
     background-color: #303841c0;
     height: 35vh;
@@ -109,10 +109,21 @@
 
 #root{
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(6,1fr);
 }
 
-.test-span{
+#item-titles{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.item-headers{
+    display: block;
+    color: white;
+    padding: 5px;
+}
+
+.item-details{
     display: block;
     color: white;
     padding: 5px;
