@@ -21,48 +21,30 @@ async function populate(){
  
     for(var p of Object.values(armorResults)){
             pairs = p
-            // console.log(pairs)
+            console.log(pairs)
+            populateArmorName(pairs)
+           
             for ( var k of Object.keys(pairs)){
                 keys = k
-                console.log(keys)
+                // console.log(keys)
+                
             }
             for (var v of Object.values(pairs)){
                 values = v
-                console.log(values)
+                // console.log(values)
             }
         }
-    
-
-    // for(var k of Object.values(armorResults)){
-    //     console.log(k)
-    // }
-    
-    // for (var key in Object.entries(armorResults)){
-    //     console.log(`${key}`)
-    // }
-
-    // for(let i=0; i < armorResults.length; i++){
-    //     armorItemsObj.push(i)
-    // }
-    
-
-
-
-    populateArmorName(armorItems)
 }
-
 
 function populateArmorName(obj){
     const namePlaceholder = document.getElementById('root')
 
-    for(let i=0; i < obj.length; i++){
+    for(var property in obj){
         var mySpan = document.createElement('span')
-        mySpan.textContent = obj[i]
+        mySpan.textContent = mySpan.textContent + " " + (obj[property])
         namePlaceholder.appendChild(mySpan)
         mySpan.classList.add('test-span')
-    }
-    
-    
+    }   
 }
 
 
