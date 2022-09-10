@@ -23,7 +23,7 @@ async function populate(){
         armorResults[x]['Category'] = armorResults[x]['category']
         delete armorResults[x]['category']
 
-        armorResults[x]['AC Modifier'] = armorResults[x]['ac_string']
+        armorResults[x]['AC'] = armorResults[x]['ac_string']
         delete armorResults[x]['ac_string']
 
         armorResults[x]['Strength Requirement'] = armorResults[x]['strength_requirement']
@@ -58,7 +58,6 @@ async function populate(){
     // Get Keys of objects in array
     for ( var k of Object.keys(pairs)){
             var keys = k
-            console.log(keys)
             populateHeaders(keys)
     }
    
@@ -70,7 +69,7 @@ async function populate(){
 }
 
 function populateArmorDetails(obj){
-    const id = document.getElementById('root')
+    const id = document.getElementById('item-info')
 
     for(var property in obj){
         var mySpan = document.createElement('span')

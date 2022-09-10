@@ -24,17 +24,22 @@ window.onclick = function(event) {
   }
 }
 
-var items = document.getElementsByClassName('.item-category-content')
+var items = document.getElementById('item-category-content')
 
-document.querySelectorAll('.item-category-button').forEach(button => {
-  button.addEventListener('click', () => {
-      const categoryContent = button.nextElementSibling;
-      button.classList.toggle('.item-category--active');
-      
-      // if (items.style.display === "block"){
-      //   items.style.display ="none";
+document.querySelectorAll('.item-category-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+      const categoryContent = tab.nextElementSibling;
+      tab.classList.toggle('item-category-tab--active');
+      items.classList.toggle('item-category-content--show')  
+
+
+      // if (items.style.display === "none"){
+      //   items.classList.toggle()
       // } else{
       //   items.style.display="block";
       // }
   })
 })
+
+console.log('yes')
+

@@ -27,11 +27,12 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: auto;
+    margin-top: 20vh;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    height: 50%;
+    width: 80%; 
+    height: 60%;
   }
   
   /* The Close Button */
@@ -70,7 +71,7 @@
     padding: 5px;
 }
 
-.item-category-button{
+.item-category-tab{
     color: white;
     display: block;
     padding: 5px;
@@ -80,34 +81,33 @@
     transition: 0.3s;
 }
 
-.item-category-button:hover{
+.item-category-tab:hover{
     padding: 10px;
     box-shadow: 1px 1px 15px 1px #D72323;
     transition: 0.3s;
     cursor: pointer;
 }
-
-.item-category-button--active + .item-category-content {
-    display: block;
-  }
-  
-.item-category-button--active{
-    background-color: #D72323;
+.item-category-content{
+    display: none;
 }
 
-.item-category-button--active:hover {
-    box-shadow: 1px 1px 15px 1px #303841;
-  }
-
-.item-category-content{
+.item-category-content--show {
     padding: 15px;
     display: grid;
     overflow: auto;
     background-color: #303841c0;
-    height: 35vh;
+    height: 45vh;
+  }
+  
+.item-category-tab--active{
+    background-color: #D72323;
 }
 
-#root{
+.item-category-tab--active:hover {
+    box-shadow: 1px 1px 15px 1px #303841;
+  }
+
+#item-info{
     display: grid;
     grid-template-columns: repeat(6,1fr);
 }
@@ -121,6 +121,7 @@
     display: block;
     color: white;
     padding: 5px;
+    border-bottom: 1px solid #fefefe;
 }
 
 .item-details{
