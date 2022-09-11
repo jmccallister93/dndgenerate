@@ -3,7 +3,7 @@
     position: relative;
     height: 220%;
     width: 100%;
-    background-image: url('/home/topshelf/repos/dndgenerate/img/bronze_dice-modified.jpg');
+    background-image: url('../img/bronze_dice-modified.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

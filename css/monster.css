@@ -1,3 +1,7 @@
+.top-container{
+  background-image: url("../img/blue_dice-modified.jpg");
+}
+
 .content-display {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

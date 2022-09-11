@@ -46,7 +46,7 @@ body::-webkit-scrollbar-button{
 .top-container {
   height: 100%;
   width: 100%;
-  background-image: url("/home/topshelf/repos/dndgenerate/img/galazy_dice-modified.jpg");
+  background-image: url("../img/galazy_dice-modified.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
