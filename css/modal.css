@@ -14,12 +14,13 @@
 
   #modal-btn{
     transition: 0.3s;
+    padding: 5px;
   }
 
   #modal-btn:hover{
-    padding: 10px;
+    transform: scale(1.1);
     box-shadow: 1px 1px 15px 1px white;
-    border-radius: 10px;
+    border-radius: 1px;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -83,7 +84,7 @@
 }
 
 .item-category-tab:hover{
-    padding: 10px;
+    transform: scale(1.05);
     box-shadow: 1px 1px 15px 1px #D72323;
     transition: 0.3s;
     cursor: pointer;
